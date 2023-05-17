@@ -1,4 +1,4 @@
-// Jerk chaotic system //
+// Jerk chaotic attractor //
 
   float x = 0.02;
   float y = 0.0;
