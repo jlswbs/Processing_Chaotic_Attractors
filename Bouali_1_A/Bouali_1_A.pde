@@ -4,6 +4,11 @@
   float y = 0.01;
   float z = 0.0;
   float dt = 0.005;
+  float a = 0.02;
+  float b = 0.4;
+  float c = 0.2;
+  float d = 10.0;
+  float e = 0.1;
   float s = 35.0;
 
 
@@ -22,9 +27,9 @@ void draw() {
     float ny = y;
     float nz = z;
     
-    x = nx + dt * (0.02 * ny + 0.4 * nx * (0.2 - pow(ny, 2.0)));
+    x = nx + dt * (a * ny + b * nx * (c - pow(ny, 2.0)));
     y = ny + dt * (-nx + s * nz);
-    z = nz + dt * (10.0 * nx - 0.1 * ny); 
+    z = nz + dt * (d * nx - e * ny); 
    
     point(320 + (58 * y), 240 + (1050 * z));
         
